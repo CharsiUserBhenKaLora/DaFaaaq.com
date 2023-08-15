@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Your existing styles */
+
+    /* Add the styles for the video background */
+    
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .button {
+      margin: 10px;
+      padding: 5px 15px; /* Adjusted padding values */
+      font-size: 24px; /* Adjusted font size */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    
+    .button1 {
+      background-color: #999999;
+      color: #ffffff;
+    }
+    
+    .button2 {
+      background-color: #999999;
+      color: #ffffff;
+    }
+    
+    .button:hover {
+      background: linear-gradient(#0F3443, #34E89E);
+    }
+    
+    .active {
+      background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+      color: #000000;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #background-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+  </style>
+  <title>smoll gift for you</title>
+</head>
+<body>
+  <video autoplay muted loop playsinline id="background-video">
+    <source src="video i wanna out as background/video.mp4" type="video/mp4">
+  </video>
+
+  <div class="button-container">
+    <button class="button button1" onclick="changeText(this)">Click me first please</button>
+    <button class="button button2" onclick="changeText(this)">Now click me</button>
+  </div>
+
+  <script>
+        function changeText(button) {
+      if (button.classList.contains("button1")) {
+        button.textContent = "IM GAY";
+      } else if (button.classList.contains("button2")) {
+        button.textContent = "Yea, you read right - you are GAY!";
+      }
+      
+      button.classList.add("active");
+    }
+  </script>
+</body>
+</html>
